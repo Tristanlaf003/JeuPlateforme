@@ -1,0 +1,55 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://scene/PlaceformeDepart.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/PlaceformeVerticalement2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scene/PlaceformePath.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scene/Placeforme2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scene/Bloc.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scene/PlaceformeVerticalement.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scene/PlaceformeFinal.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scene/PlateformeHorizontal.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scene/PlateformeHorizontal2.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scene/Background.tscn" type="PackedScene" id=11]
+
+[node name="Main" type="Node"]
+
+[node name="Bloc2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0, -291.754 )
+rotation = 1.5708
+
+[node name="Bloc3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1087.82, -308.634 )
+rotation = 1.5708
+
+[node name="Background" parent="." instance=ExtResource( 11 )]
+position = Vector2( -28.8275, 574.807 )
+
+[node name="Placeforme2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 127.361, 280.861 )
+
+[node name="Placeforme3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 764.507, 256.489 )
+
+[node name="Placeforme4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 766.625, 385.864 )
+
+[node name="PlaceformeDepart" parent="." instance=ExtResource( 2 )]
+position = Vector2( 10.8281, 349.617 )
+
+[node name="PlaceformeVerticale" parent="." instance=ExtResource( 7 )]
+position = Vector2( 272.748, 170.257 )
+
+[node name="PlaceformeHorizontale" parent="." instance=ExtResource( 9 )]
+position = Vector2( 271.373, 441.6 )
+
+[node name="PlaceformeVerticale2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 452.462, 298.884 )
+
+[node name="PlaceformeHorizontale2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 590.903, 380.496 )
+
+[node name="PlaceformePath" parent="." instance=ExtResource( 4 )]
+position = Vector2( 583.343, 177.649 )
+
+[node name="PlaceformeFinal" parent="." instance=ExtResource( 8 )]
+position = Vector2( 959.981, 317.578 )
