@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
+[ext_resource path="res://scene/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scene/PlaceformeDepart.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scene/PlaceformeVerticalement2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scene/PlaceformePath.tscn" type="PackedScene" id=4]
@@ -10,8 +11,10 @@
 [ext_resource path="res://scene/PlateformeHorizontal.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scene/PlateformeHorizontal2.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scene/Background.tscn" type="PackedScene" id=11]
+[ext_resource path="res://script/Main.gd" type="Script" id=12]
 
 [node name="Main" type="Node"]
+script = ExtResource( 12 )
 
 [node name="Bloc2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 0, -291.754 )
@@ -36,14 +39,11 @@ position = Vector2( 766.625, 385.864 )
 [node name="PlaceformeDepart" parent="." instance=ExtResource( 2 )]
 position = Vector2( 10.8281, 349.617 )
 
-[node name="PlaceformeVerticale" parent="." instance=ExtResource( 7 )]
-position = Vector2( 272.748, 170.257 )
-
 [node name="PlaceformeHorizontale" parent="." instance=ExtResource( 9 )]
 position = Vector2( 271.373, 441.6 )
 
 [node name="PlaceformeVerticale2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 452.462, 298.884 )
+position = Vector2( 448, 320 )
 
 [node name="PlaceformeHorizontale2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 590.903, 380.496 )
@@ -53,3 +53,8 @@ position = Vector2( 583.343, 177.649 )
 
 [node name="PlaceformeFinal" parent="." instance=ExtResource( 8 )]
 position = Vector2( 959.981, 317.578 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 32.8008, 346.429 )
+
+[node name="PlaceformeVerticale" parent="." instance=ExtResource( 7 )]

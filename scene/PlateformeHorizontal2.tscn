@@ -1,9 +1,51 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 25.1851, 2.68644 )
 
+[sub_resource type="Animation" id=2]
+resource_name = "sceneAnimationHorizontale2"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 25.0433, 2.53712 ), Vector2( 25.0433, 2.53712 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Polygon2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 6.10759, 3.50454 ), Vector2( 6.10759, 3.50454 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 448, 376 ), Vector2( 704, 376 ) ]
+}
+
 [node name="PlaceformeHorizontale2" type="StaticBody2D"]
+position = Vector2( 529.796, 376 )
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 position = Vector2( 6.10759, 3.50454 )
@@ -14,3 +56,6 @@ polygon = PoolVector2Array( -6.21381, -3.60413, -6.14395, 1.53467, 18.8779, 1.53
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 25.0433, 2.53712 )
 shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/sceneAnimationHorizontale2 = SubResource( 2 )
